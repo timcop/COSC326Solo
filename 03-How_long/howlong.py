@@ -1,4 +1,5 @@
 import sys
+
 problems_all = []
 problems = []
 for line in sys.stdin:
@@ -15,7 +16,7 @@ for line in sys.stdin:
             for letter in length:
                 if letter == line[0]:
                     length = 'NaN'
-        
+
         prob = (colour, length)
         problems.append(prob)
 
@@ -24,7 +25,7 @@ print()
 for i in range(len(problems_all)):
     solved = []
     #len_prob_init = len(prob)
-    
+
     for i, tup in enumerate(prob):
         print(tup)
         if isinstance(tup[1], int):
@@ -52,7 +53,7 @@ if(False):
                             temp = (tup[0], 'NaN')
                             solved.append(temp)
                             prob.pop(prob.index())
-                            
+
                         else:
                             s += solv[1]
                             count+=1
@@ -60,5 +61,3 @@ if(False):
                 temp = (tup[0], s)
                 solved.append(temp)
                 prob.pop(i)
-
-
