@@ -1,12 +1,10 @@
-g = 0
-r = 0
-b = 0
-w = 5
+import sys
 
-g = 3 * w
-r = 2 * b
-b = 2 * r
-
-print(g)
-print(b)
-print(r)
+problem = []
+for line in sys.stdin:
+    line = line.split()
+    try:
+        prob = [line[0], int(line[1])]
+    except:
+        prob = [line[0], line[1]]
+    problem.append(prob)
