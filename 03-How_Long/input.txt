@@ -1,7 +1,7 @@
-a bcdefghijklmnopqrstuvwxyza
-b cdefghijklmnopqrstuvwxyza
-c defghijklmnopqrstuvwxyza
-d efghijklmnopqrstuvwxyza
+a bcdefghijklmnopqrstuvwxyz
+b cdefghijklmnopqrstuvwxyz
+c defghijklmnopqrstuvwxyz
+d efghijklmnopqrstuvwxyz
 e fghijklmnopqrstuvwxyz
 f ghijklmnopqrstuvwxyz
 g hijklmnopqrstuvwxyz

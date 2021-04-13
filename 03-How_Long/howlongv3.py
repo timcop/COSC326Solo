@@ -2,8 +2,9 @@ import sys
 import numpy as np
 import copy
 
+## Handles input
 problems_all = []
-something = []
+current = []
 for line in sys.stdin:
     if not line.isspace():
         line = line.split()
@@ -11,12 +12,15 @@ for line in sys.stdin:
             prob = [line[0], int(line[1])]
         except:
             prob = [line[0], line[1]]
-        something.append(prob)
+        current.append(prob)
     else:
-        problems_all.append(something)
-        something = []
-problems_all.append(something)
+        if len(current) > 0:
+            problems_all.append(current)
+            current = []
+if len(current) > 0:
+    problems_all.append(current)
 
+## Loop through each problem
 for problem in problems_all:
     finished_rows = set()
     n = len(problem)
@@ -65,5 +69,7 @@ for problem in problems_all:
     for i in range(n):
         if not np.all(colours[i, :] == 0):
             scalar_array[i] = 'NaN'
-    print(scalar_array)
+
+    for i in range(n):
+        print(problem[i][0] + " " + str(scalar_array[i]))
     print("")

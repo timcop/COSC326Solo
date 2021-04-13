@@ -1,0 +1,10 @@
+r bwb  <use granny knots!>
+b www  #use reef knots
+w 5
+p brbr
+
+g www
+r bb
+b rr
+w 5
+p wyw

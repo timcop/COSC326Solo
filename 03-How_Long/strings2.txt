@@ -1,0 +1,5 @@
+g www
+r bb
+b rr
+w 5
+p wyw
