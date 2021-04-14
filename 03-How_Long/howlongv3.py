@@ -62,7 +62,7 @@ for problem in problems_all:
                         if scalar_array[i] == 'NaN':
                              scalar_array[j] = 'NaN'
                         elif scalar_array[j] != 'NaN':
-                             scalar_array[j] += colours[j, i] * scalar_array[i]
+                             scalar_array[j] += int(colours[j, i]) * scalar_array[i]
                         colours[j, i] = 0
                 finished_rows.add(i)
 
