@@ -1,9 +1,10 @@
 
 import math as m
+import time as time
 
 # Returns sum of all factors of n.
 def sumofFactors(n):
-
+    temp = n
     # Traversing through all
     # prime factors
     res = 1
@@ -27,8 +28,15 @@ def sumofFactors(n):
     if n > 2:
         res = res * (1 + n)
 
-    return res;
+    return int(res - temp -1);
+
 
 # driver code
-print(sumofFactors(48))
-print(sumofFactors(75))
+done = set()
+for i in range(3, 2000000):
+    if i not in done:
+        i_dsum = sumofFactors(i)
+        if i_dsum >= i and i == sumofFactors(i_dsum):
+            print(str(i) + " " + str(i_dsum))
+            done.add(i)
+            done.add(i_dsum)
