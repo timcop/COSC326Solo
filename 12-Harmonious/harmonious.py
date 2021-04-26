@@ -30,13 +30,18 @@ def sumofFactors(n):
 
     return int(res - temp -1);
 
-
 # driver code
-done = set()
+# done = set()
+# for i in range(3, 2000000):
+#     if i not in done:
+#         i_dsum = sumofFactors(i)
+#         if i_dsum >= i and i == sumofFactors(i_dsum):
+#             print(str(i) + " " + str(i_dsum))
+#             done.add(i)
+#             done.add(i_dsum)
+
+start = time.time()
 for i in range(3, 2000000):
-    if i not in done:
-        i_dsum = sumofFactors(i)
-        if i_dsum >= i and i == sumofFactors(i_dsum):
-            print(str(i) + " " + str(i_dsum))
-            done.add(i)
-            done.add(i_dsum)
+    sum = sumofFactors(i)
+finish = time.time()
+print(finish-start)
