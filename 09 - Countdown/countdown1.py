@@ -120,6 +120,7 @@ for line in sys.stdin:
     if count % 2 == 0:
         problems_all.append(current)
         current = []
+
 start = time.time()
 compute_problems(problems_all)
 finish = time.time()
