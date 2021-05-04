@@ -106,9 +106,12 @@ class Tree:
 
     def Print_Solution(self):
         path = []
+        found_solution = False
         if self.order == 'L':
             for node in self.bottom_level:
                 if node.data == self.target:
+                    found_solution = True
+                    print(self.order + ' ' + str(self.target), end = ' ')
                     print(self.root.data, end = ' ')
                     for num in reversed(self.numbers):
                         if node.parent != None:
@@ -122,7 +125,10 @@ class Tree:
                 print(i[0] + ' ' + str(i[1]), end = ' ')
         else:
             for node in self.bottom_level:
+
                 if node.data == self.target:
+                    found_solution = True
+                    print(self.order + ' ' + str(self.target), end = ' ')
                     print(self.root.data, end = ' ')
                     for num in reversed(self.numbers):
                         if node.parent != None:
@@ -134,8 +140,6 @@ class Tree:
                     break
             for i in reversed(path):
                 print(i[0] + ' ' + str(i[1]), end = ' ')
-
-tree = Tree([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30], 'N', 1000000)
-tree.Load_Tree()
-tree.Print_Solution()
-#tree.root.PrintTree()
+        if not found_solution:
+            print(self.order + ' ' + str(self.target) + ' ' + "impossible", end = '')
+        print()
