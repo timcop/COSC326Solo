@@ -4,7 +4,7 @@ from tree import Node, Tree
 count = 0
 problems_all = []
 current = []
-
+# Read from standard input
 for line in sys.stdin:
     count+=1
     line = line.split()
@@ -13,9 +13,8 @@ for line in sys.stdin:
         problems_all.append(current)
         current = []
 
-
+# For each problem, create it's tree and print solution
 for prob in problems_all:
-    # print(prob)
     nums = list(map(int, prob[0]))
     target = int(prob[1][0])
     order = prob[1][1]
