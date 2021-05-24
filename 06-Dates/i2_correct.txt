@@ -1,0 +1,29 @@
+20 Apr 1997
+19 Jun 2005
+04 May 2040
+26 Jan 1965
+23#23#23 - INVALID: Does not follow the correct format.
+123/04/2000 - INVALID: Day has too many characters.
+0/2/79 - INVALID: Day is too small.
+32/2/04 - INVALID: Day is too large.
+12-0-2001 - INVALID: Month is too small.
+13-13-13 - INVALID: Month is too large.
+14-320-14 - INVALID: Month is not a valid month.
+20 May 2003
+25-MAy-1942 - INVALID: Month is not a valid month.
+19 May 1987
+05-mAY-1967 - INVALID: Month is not a valid month.
+06-maY-1899 - INVALID: Month is not a valid month.
+07/mAy/1897 - INVALID: Month is not a valid month.
+18 May 1862
+15 MaY 2000 - INVALID: Month is not a valid month.
+01 MAy 2001 - INVALID: Month is not a valid month.
+01 oct 3000 - INVALID: Year is too large.
+29 Feb 2024
+29 02 2023 - INVALID: 2023 is not a leap year.
+29 Feb 2000
+29 02 2100 - INVALID: 2100 is not a leap year.
+1 1 11 - INVALID: First character is not a number.
+1   2 3 - INVALID: Does not follow the correct format.
+2 3  4 - INVALID: Does not follow the correct format.
+30 2 1986 - INVALID: Feb has less than 30 days.
