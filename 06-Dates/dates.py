@@ -3,7 +3,7 @@ import sys
 
 lower_year = 1753 #minimum year
 upper_year = 3000 #maximum year
-months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct,' 'nov', 'dec'] #all months
+months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'] #all months
 long_months = ['jan', 'mar', 'may', 'jul', 'aug', 'oct', 'dec']
 short_months = ['feb', 'apr', 'jun', 'sep', 'nov']
 
@@ -63,6 +63,7 @@ class Date:
                 return False
             #Convert month to string
             self.month = months[int_month-1]
+
         else:
             if self.month[0].isupper():
                 if self.month[1:] != self.month[1:].upper() and self.month[1:] != self.month[1:].lower():
@@ -236,16 +237,19 @@ for line in sys.stdin:
                     break
             elif in_year:
                 if isSeperator(letter):
-                    if letter not in current_seperator:
-                        printInvalid(line, "Incorrect Seperation")
-                        valid_date = False
-                        break
-                    if len(year) == 0:
-                        printInvalid(line, "Incorrect Seperation")
-                        valid_date = False
-                        break
-                    else:
-                        in_year = False
+                    printInvalid(line, "Error, seperator encountered after year")
+                    valid_date = False
+                    break
+                    # if letter not in current_seperator:
+                    #     printInvalid(line, "Incorrect Seperation")
+                    #     valid_date = False
+                    #     break
+                    # if len(year) == 0:
+                    #     printInvalid(line, "Incorrect Seperation")
+                    #     valid_date = False
+                    #     break
+                    # else:
+                    #     in_year = False
                 elif isNumber(letter):
                     year += letter
                     if len(year) > 4:
