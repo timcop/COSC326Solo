@@ -24,7 +24,7 @@ class Date:
             self.day = '0' + str(self.day)
         else:
             self.day = str(self.day)
-        self.month = self.month.upper()
+        self.month = self.month[0].upper() + self.month[1:]
         print(self.day + " " + self.month + " " + self.year)
 
     # Determines whether a year is valid, returns true or false.
